@@ -1,0 +1,27 @@
+.btnBarDisplay {
+    height: 60px;
+    margin: 10px 0 10px 0;
+    border: aquamarine solid 4px;
+    border-radius: 10px;
+}
+
+.btnPosition {
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btnDisplay button{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: aquamarine;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 80px;
+    height: 40px;
+}
+
+.btnDisplay button:disabled {
+    background-color: darkcyan;
+}
