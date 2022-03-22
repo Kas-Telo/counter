@@ -1,7 +1,7 @@
 import React from 'react';
-import {ButtonsBar} from "../ButtonsBar/ButtonsBar";
+import {CounterButtonsBar} from "../CounterButtonsBar/CounterButtonsBar";
 import {CounterDisplay} from "../CounterDisplay/CounterDisplay";
-import s from './Counter.module.css'
+import s from './CounterBox.module.css'
 
 type CounterPropsType = {
     counter: number;
@@ -9,14 +9,14 @@ type CounterPropsType = {
     resetCounter: () => void;
 }
 
-export const Counter = (props: CounterPropsType) => {
+export const CounterBox = (props: CounterPropsType) => {
     return (
         <div className={s.counter}>
             <div className={s.innerCounter}>
                 <CounterDisplay counter={props.counter}/>
-                <ButtonsBar counter={props.counter}
-                               incrementCounter={props.incrementCounter}
-                               resetCounter={props.resetCounter}/>
+                <CounterButtonsBar counter={props.counter}
+                                   incrementCounter={props.incrementCounter}
+                                   resetCounter={props.resetCounter}/>
             </div>
         </div>
     );

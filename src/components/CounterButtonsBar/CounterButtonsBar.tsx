@@ -8,7 +8,7 @@ type ButtonBarPropsType = {
     resetCounter: () => void;
 }
 
-export const ButtonsBar = (props: ButtonBarPropsType) => {
+export const CounterButtonsBar = (props: ButtonBarPropsType) => {
 
     const isIncDisabled = props.counter === 5
     const isResetDisabled = props.counter === 0

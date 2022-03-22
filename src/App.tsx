@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Counter} from "./components/Counter/Counter";
+import {CounterBox} from "./components/CounterBox/CounterBox";
+import {SettingsBox} from "./components/Settings/SettingsBox";
 
 function App() {
     let [counter, setCounter] = useState<number>(0);
@@ -19,16 +20,16 @@ function App() {
 
     return (
         <div className={"app-wrapper"}>
-            <div className={'settings-wrapper'}><Counter
-                counter={counter}
-                incrementCounter={incrementCounter}
-                resetCounter={resetCounter}
-            /></div>
-            <div className={'counter-wrapper'}><Counter
-                counter={counter}
-                incrementCounter={incrementCounter}
-                resetCounter={resetCounter}
-            /></div>
+            <div className={'settings-wrapper'}>
+                <SettingsBox/>
+                </div>
+            <div className={'counter-wrapper'}>
+                <CounterBox
+                    counter={counter}
+                    incrementCounter={incrementCounter}
+                    resetCounter={resetCounter}
+                />
+            </div>
         </div>
 
 
