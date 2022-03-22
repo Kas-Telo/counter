@@ -2,13 +2,18 @@
     width: 100vw;
     height: 100vh;
     background-color: darkslategrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .counter-wrapper {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-55%, -50%);
+    margin-left: 50px;
 }
+.settings-wrapper {
+    margin-right: 50px;
+}
+
 
 

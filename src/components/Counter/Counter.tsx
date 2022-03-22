@@ -12,8 +12,12 @@ type CounterPropsType = {
 export const Counter = (props: CounterPropsType) => {
     return (
         <div className={s.counter}>
-            <CounterDisplay counter={props.counter}/>
-            <ButtonsBar counter={props.counter} incrementCounter={props.incrementCounter} resetCounter={props.resetCounter}/>
+            <div className={s.innerCounter}>
+                <CounterDisplay counter={props.counter}/>
+                <ButtonsBar counter={props.counter}
+                               incrementCounter={props.incrementCounter}
+                               resetCounter={props.resetCounter}/>
+            </div>
         </div>
     );
 };

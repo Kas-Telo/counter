@@ -19,20 +19,21 @@ function App() {
 
     return (
         <div className={"app-wrapper"}>
-            <div className={'counter-wrapper'}>
-                <Counter
-                    counter={counter}
-                    incrementCounter={incrementCounter}
-                    resetCounter={resetCounter}
-                />
-            </div>
+            <div className={'settings-wrapper'}><Counter
+                counter={counter}
+                incrementCounter={incrementCounter}
+                resetCounter={resetCounter}
+            /></div>
+            <div className={'counter-wrapper'}><Counter
+                counter={counter}
+                incrementCounter={incrementCounter}
+                resetCounter={resetCounter}
+            /></div>
         </div>
 
 
     );
 }
-
-
 
 
 export default App;

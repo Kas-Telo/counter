@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './ButtonsBar.module.css'
 
 
@@ -23,21 +23,19 @@ export const ButtonsBar = (props: ButtonBarPropsType) => {
 
     return (
         <div className={s.btnBarDisplay}>
-            <div className={s.btnPosition}>
-                <div className={s.btnDisplay}>
-                    <button
-                        disabled={isIncDisabled}
-                        onClick={incrementHandler}>
-                        inc
-                    </button>
-                </div>
-                <div className={s.btnDisplay}>
-                    <button
-                        disabled={isResetDisabled}
-                        onClick={resetHandler}>
-                        reset
-                    </button>
-                </div>
+            <div className={s.btnDisplay}>
+                <button
+                    disabled={isIncDisabled}
+                    onClick={incrementHandler}>
+                    inc
+                </button>
+            </div>
+            <div className={s.btnDisplay}>
+                <button
+                    disabled={isResetDisabled}
+                    onClick={resetHandler}>
+                    reset
+                </button>
             </div>
         </div>
     );

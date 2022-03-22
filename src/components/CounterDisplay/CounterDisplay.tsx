@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './CounterDisplay.module.css'
 
 type CounterDisplayPropsType = {
@@ -6,9 +6,10 @@ type CounterDisplayPropsType = {
 }
 
 export const CounterDisplay = (props: CounterDisplayPropsType) => {
+    let spanClassName = `${s.spanDisplay} ${props.counter === 5 ? s.errorColor : ''}`
     return (
         <div className={s.counterDisplay}>
-            <span className={props.counter === 5 ? s.errorColor : ''}>{props.counter}</span>
+            <span className={spanClassName}>{props.counter}</span>
         </div>
     );
 };
