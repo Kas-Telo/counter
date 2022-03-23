@@ -1,0 +1,12 @@
+.superButton {
+    background-color: aquamarine;
+    border-radius: 15px;
+    font-size: x-large;
+    font-weight: bold;
+    width: 110px;
+    height: 40px;
+}
+
+.superButton:disabled {
+    background-color: darkgrey;
+}

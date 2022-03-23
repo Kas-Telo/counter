@@ -1,17 +1,20 @@
 import React from 'react';
 import s from './ButtonsBar.module.css'
+import {SuperButton} from "../SuperButton/SuperButton";
 
 
 type ButtonBarPropsType = {
-    counter: number;
+    startValue: number;
+    maxValue: number;
+    counter: number | string;
     incrementCounter: () => void;
     resetCounter: () => void;
 }
 
 export const CounterButtonsBar = (props: ButtonBarPropsType) => {
 
-    const isIncDisabled = props.counter === 5
-    const isResetDisabled = props.counter === 0
+    const isIncDisabled = props.counter === props.maxValue || typeof(props.counter) === 'string'
+    const isResetDisabled = props.counter === props.startValue || typeof(props.counter) === 'string'
 
     const incrementHandler = () => {
         props.incrementCounter();
@@ -23,20 +26,8 @@ export const CounterButtonsBar = (props: ButtonBarPropsType) => {
 
     return (
         <div className={s.btnBarDisplay}>
-            <div className={s.btnDisplay}>
-                <button
-                    disabled={isIncDisabled}
-                    onClick={incrementHandler}>
-                    inc
-                </button>
-            </div>
-            <div className={s.btnDisplay}>
-                <button
-                    disabled={isResetDisabled}
-                    onClick={resetHandler}>
-                    reset
-                </button>
-            </div>
+            <SuperButton onClick={incrementHandler} disabled={isIncDisabled}>inc</SuperButton>
+            <SuperButton onClick={resetHandler} disabled={isResetDisabled}>reset</SuperButton>
         </div>
     );
 };

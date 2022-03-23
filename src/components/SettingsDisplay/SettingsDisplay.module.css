@@ -1,0 +1,45 @@
+.settingsDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 160px;
+    border: aquamarine solid 3px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.inputForm1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 15px 10px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.inputForm2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 10px 0 10px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.errorInput {
+    text-align: center;
+    font-weight: bold;
+    border: red solid 2px;
+    border-radius: 5px;
+    background-color: pink;
+    outline: none;
+}
+
+.input {
+    text-align: center;
+    font-weight: bold;
+    border: aquamarine solid 3px;
+    border-radius: 5px;
+    outline: none;
+}
+
+
+

@@ -1,19 +1,20 @@
 import React from 'react';
 import s from "../CounterButtonsBar/ButtonsBar.module.css";
+import {SuperButton} from "../SuperButton/SuperButton";
 
-export const SettingsButtonsBar = () => {
+type SettingsButtonsBarPropsType = {
+    setValuesSettings: () => void
+}
+
+export const SettingsButtonsBar = (props: SettingsButtonsBarPropsType) => {
+
     const setHandler = () => {
-       //code ;
+        props.setValuesSettings()
     }
 
     return (
         <div className={s.btnBarDisplay}>
-            <div className={s.btnDisplay}>
-                <button
-                    onClick={setHandler}>
-                    set
-                </button>
-            </div>
+            <SuperButton onClick={setHandler}>set</SuperButton>
         </div>
     );
 };
